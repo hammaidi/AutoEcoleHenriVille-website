@@ -1,0 +1,244 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+html{
+
+    scroll-behavior:smooth ;
+    font-family: Poppins, 'sans serif';
+
+    
+        background-color: #196ba2;
+       
+        
+    
+    
+}
+
+/*Balise Header*/
+
+header{
+
+    background-color: rgb(250 250 250);
+
+}
+
+nav{
+
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+nav a{
+    text-decoration: none;
+    
+}
+
+
+nav .logo{
+
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+nav .nav_links {
+    
+    align-items: center;
+    
+    
+}
+
+nav .nav_links a{
+
+    color: red;
+    font-size: 25px;
+    margin: 0px 25px;
+    position: relative;
+}
+
+/*si ce css ne fonctionne pas cest souvent psk la nav a nest pas en position relative */
+.nav_links a::after{
+    content: '';
+     position: absolute;
+     bottom: -6px; /*fait passer la barre du haut du a > vers le bas*/
+     left: 0;
+     width: 100%;
+     height:3px ;
+     background-color: red;
+     transform: scaleX(0);
+     transition: transform .3s;
+  
+}
+ 
+.nav_links a:hover::after{
+     
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+.btn_hamburger{
+
+    width:50px ;
+    display: none;
+    cursor: pointer;
+}
+
+main h2{
+
+    display: flex;
+    justify-content: center;
+    
+    padding: 30px;
+    color: #fff;
+    margin-bottom: 20vh;
+}
+
+.img_gt{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    display: flex;
+
+
+}
+
+
+.grille_tarifaire img{
+
+    height: 80vh;
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    margin: 40px 20px;
+    
+}
+
+
+.socialmedia{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10vw;
+
+    
+}
+
+
+.socialmedia img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 5px;
+ }
+
+.socialmedia p{
+    color: white;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PARTIT RESPONSIVE*/
+
+@media(max-width:921px){
+
+
+    .btn_hamburger{
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width:50px ;
+        
+    }
+
+    .nav_links{
+        left: 0;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 100vw;
+        top: 9vh;
+        background-color:white;
+         margin-left: -200%; 
+        transition: all 700ms;
+        
+    }
+
+    .nav_links a{
+        color: #005fa0;
+        padding: 15px;
+    }
+    
+
+    .mobile_menu{
+
+        margin-left:  0;
+    }
+
+    .grille_tarifaire img{
+
+        height: 40vh;
+        width: 40vh;
+        margin: 10px 10px;
+       
+    }
+
+    .socialmedia{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10vw;
+    
+        
+    }
+
+
+    .socialmedia img{
+        width: 30px;
+        height: 30px;
+        margin: 0px 5px;
+     }
+
+    .socialmedia p{
+        color: white;
+        font-size: 16px;
+    }
+     
+
+
+
+
+}
+
